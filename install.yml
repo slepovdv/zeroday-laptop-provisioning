@@ -27,7 +27,7 @@
 
   - name: Configuration bashrc
     blockinfile:
-      path: "{{ packages }}/.bashrc"
+      path: "{{ home_dir }}/.bashrc"
       block: |
         export PATH="$HOME/.pyenv/bin:$PATH"
         eval "$(pyenv init -)"
