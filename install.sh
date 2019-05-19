@@ -42,6 +42,7 @@ fi
 
 # Install Docker
 getdockerversion=$(docker -v)
+dockerrelease="test"
 if [ "Docker" == "${getdockerversion:0:6}" ]; then
     echo "${getansibleversion:0} is install"
 else
@@ -49,8 +50,8 @@ else
     sudo add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
-    stable"
-    sudo apt-get update && sudo apt-get install - y docker-ce docker-ce-cli containerd.io
+    $dockerrelease"
+    sudo apt-get update && sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 fi
 
 
