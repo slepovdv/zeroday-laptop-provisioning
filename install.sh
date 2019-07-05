@@ -63,6 +63,7 @@ sudo apt install ./google-chrome*.deb
 sudo snap install code --classic
 sudo snap install telegram-desktop
 sudo snap install micro --classic
+sudo snap install slack --classic
 
 
 # Run ansible playbook
